@@ -1,0 +1,6 @@
+15:30:05 **** Build of configuration GNU ARM v7.2.1 - Debug for project 2370F22_Blinky_Import ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+
+15:30:06 Build Finished. 0 errors, 0 warnings. (took 1s.73ms)
+

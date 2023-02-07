@@ -1,0 +1,7 @@
+15:40:58 **** Clean-only build of configuration GNU ARM v7.2.1 - Debug for project MS_2370F22_Lab4_EM ****
+make -j16 clean 
+rm -rf MS_2370F22_Lab4_EM.axf
+ 
+
+15:41:01 Build Finished. 0 errors, 0 warnings. (took 3s.409ms)
+

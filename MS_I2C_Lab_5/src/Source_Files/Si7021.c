@@ -1,0 +1,92 @@
+/**
+ * @file Si7021.c
+ * @author Matthew Su
+ * @date 10/6/2022
+ * @brief Contains all the Si7021 driver functions
+ *
+ */
+
+#include "Si7021.h"
+
+static uint32_t read_result;
+
+
+/***************************************************************************//**
+ * @brief
+ * init all I2C_OPEN_STRUCT operation values and transitions into i2c_open()
+ *
+ * @details
+ * Uses timer_delay to delay while Si7021 is given max time (80ms) to fully power up.
+ * Then calls a local struct to set values that will be passed on to i2c_open and used
+ * during its setup.
+ *
+ ******************************************************************************/
+
+void si7021_i2c_open()
+{
+  timer_delay(POR_DELAY);
+  I2C_OPEN_STRUCT locali2c;
+
+  locali2c.enable = ENABLE;
+  locali2c.master = MASTER;
+  locali2c.refFreq = 0; //Need to input some kind of value
+  locali2c.freq = FREQ; //Need to input some kind of value
+  locali2c.clhr = CLHR; // no idea what this value is
+   // route location and enable
+  locali2c.out_pin_SCL = SCL_ROUTE;
+  locali2c.out_pin_SCL_en = true;
+  locali2c.out_pin_SDA = SDA_ROUTE;
+  locali2c.out_pin_SDA_en = true;
+
+//  if(SDA_ROUTE == I2C_ROUTELOC0_SDALOC_LOC15){
+//      i2c_open(I2C0,&locali2c);
+//      }
+//  if(SDA_ROUTE == I2C_ROUTELOC0_SDALOC_LOC19){
+//      i2c_open(I2C0,&locali2c);
+//    }
+
+  i2c_open(I2C,&locali2c);
+
+  // i2c_start(I2C_TypeDef *i2c, uint32_t dadd, uint32_t* rec_data, uint32_t hum_cmd, uint32_t bytes_num, bool busy, uint32_t callback)
+
+  // i2c_start(I2C0, DAD, &read_result, HUM, 1, 0,CALLBACK);
+
+}
+
+/***************************************************************************//**
+ * @brief
+ * called during event scheduler in main, contains i2c_start function
+ *
+ * @details
+ * called in main under if statement checking for event LETIMER0_UF_CB, input value is the
+ * defined CALLBACK value of 0x160 which will be denoted in a future if statement in
+ * the same loop to trigger the humidity call.
+ *
+ ******************************************************************************/
+
+void si7021_read(uint32_t CB)
+{
+  i2c_start(I2C, DAD, &read_result, HUM, NUMBYTES, BUSYBIT, CB);
+}
+
+/***************************************************************************//**
+ * @brief
+ * converts read_result value from Si7021 into a usable value
+ *
+ * @parameter
+ *
+ * @details
+ * checks static global uint_32 value read_result and converts whatever value exists
+ * within it into a usable humidity value that is relayed back into
+ * scheduled_si7021_read_cb(void).
+ *
+ ******************************************************************************/
+
+uint32_t si7021_read_convert()
+{
+  uint32_t result = ((125*read_result)/(65536))-6;
+  // return read_result to blank state
+  read_result = 0;
+  return result;
+}
+

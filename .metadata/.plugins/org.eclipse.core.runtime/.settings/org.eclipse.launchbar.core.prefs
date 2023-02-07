@@ -1,0 +1,15 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:2370F22_Blinky_Import GNU ARM v7.2.1 - Debug,org.eclipse.launchbar.core.descriptorType.default\:ECEN2370F22_Lab2 GNU ARM v7.2.1 - Debug,org.eclipse.launchbar.core.descriptorType.default\:MS_2370_PWM GNU ARM v7.2.1 - Debug,org.eclipse.launchbar.core.descriptorType.default\:MS_EM_Lab GNU ARM v7.2.1 - Debug,org.eclipse.launchbar.core.descriptorType.default\:MS_EM_Lab GNU ARM v7.2.1 - Release (Exx32 energy profile),org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5 GNU ARM v7.2.1 - Release (Exx32 energy profile),org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5 GNU ARM v7.2.1 - Release,org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5 GNU ARM v7.2.1 - Debug,org.eclipse.launchbar.core.descriptorType.default\:MS_Course_Project GNU ARM v7.2.1 - Release (Exx32 energy profile),org.eclipse.launchbar.core.descriptorType.default\:MS_Course_Project GNU ARM v7.2.1 - Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:2370F22_Blinky_Import\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:2370F22_Blinky_Import\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:MS_2370_PWM\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:MS_Course_Project\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:MS_Course_Project\ GNU\ ARM\ v7.2.1\ -\ Release\ (Exx32\ energy\ profile)/activeLaunchMode=profile
+org.eclipse.launchbar.core.descriptorType.default\:MS_EM_Lab\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:MS_EM_Lab\ GNU\ ARM\ v7.2.1\ -\ Release\ (Exx32\ energy\ profile)/activeLaunchMode=profile
+org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5\ GNU\ ARM\ v7.2.1\ -\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5\ GNU\ ARM\ v7.2.1\ -\ Release\ (Exx32\ energy\ profile)/activeLaunchMode=profile
+org.eclipse.launchbar.core.descriptorType.default\:MS_I2C_Lab_5\ GNU\ ARM\ v7.2.1\ -\ Release/activeLaunchMode=run

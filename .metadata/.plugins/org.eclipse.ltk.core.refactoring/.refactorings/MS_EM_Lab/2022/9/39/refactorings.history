@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MS_EM_Lab/src/Source_Files/schueduler.c&apos; to &apos;scheduler.c&apos;" description="Rename resource &apos;schueduler.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Source_Files/schueduler.c" name="scheduler.c" stamp="1663885519040" updateReferences="true"/>
+</session>

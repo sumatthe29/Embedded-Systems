@@ -1,0 +1,41 @@
+15:59:47 **** Incremental Build of configuration GNU ARM v7.2.1 - Release for project MS_I2C_Lab_5 ****
+make -j16 all 
+Building file: ../src/Source_Files/i2c.c
+Invoking: GNU ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -std=c99 '-DEFM32PG12B500F1024GL125=1' -I"C:\Users\mattl\ECEN 2370\MS_I2C_Lab_5\src\Header_Files" -I"C:\Users\mattl\ECEN 2370\MS_I2C_Lab_5\src\Source_Files" -I"C:\Users\mattl\ECEN 2370\MS_I2C_Lab_5" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//platform/CMSIS/Include" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//hardware/kit/common/bsp" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//platform/emlib/inc" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//hardware/kit/common/drivers" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//platform/Device/SiliconLabs/EFM32PG12B/Include" -I"C:/SiliconLabs/SimplicityStudio/v5/developer/sdks/gecko_sdk_suite/v3.2//hardware/kit/SLSTK3402A_EFM32PG12/config" -O2 -Wall -ffunction-sections -fdata-sections -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -c -fmessage-length=0 -MMD -MP -MF"src/Source_Files/i2c.d" -MT"src/Source_Files/i2c.o" -o "src/Source_Files/i2c.o" "../src/Source_Files/i2c.c"
+Finished building: ../src/Source_Files/i2c.c
+ 
+Building target: MS_I2C_Lab_5.axf
+Invoking: GNU ARM C Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -T "MS_I2C_Lab_5.ld" -Xlinker --gc-sections -Xlinker -Map="MS_I2C_Lab_5.map" -mfpu=fpv4-sp-d16 -mfloat-abi=softfp --specs=nano.specs -o MS_I2C_Lab_5.axf "./CMSIS/EFM32PG12B/startup_gcc_efm32pg12b.o" "./CMSIS/EFM32PG12B/system_efm32pg12b.o" "./emlib/em_acmp.o" "./emlib/em_adc.o" "./emlib/em_aes.o" "./emlib/em_assert.o" "./emlib/em_burtc.o" "./emlib/em_can.o" "./emlib/em_cmu.o" "./emlib/em_cmu_fpga.o" "./emlib/em_core.o" "./emlib/em_cryotimer.o" "./emlib/em_crypto.o" "./emlib/em_csen.o" "./emlib/em_dac.o" "./emlib/em_dbg.o" "./emlib/em_dma.o" "./emlib/em_ebi.o" "./emlib/em_emu.o" "./emlib/em_eusart.o" "./emlib/em_gpcrc.o" "./emlib/em_gpio.o" "./emlib/em_i2c.o" "./emlib/em_iadc.o" "./emlib/em_idac.o" "./emlib/em_lcd.o" "./emlib/em_ldma.o" "./emlib/em_lesense.o" "./emlib/em_letimer.o" "./emlib/em_leuart.o" "./emlib/em_msc.o" "./emlib/em_opamp.o" "./emlib/em_pcnt.o" "./emlib/em_pdm.o" "./emlib/em_prs.o" "./emlib/em_qspi.o" "./emlib/em_rmu.o" "./emlib/em_rtc.o" "./emlib/em_rtcc.o" "./emlib/em_se.o" "./emlib/em_system.o" "./emlib/em_timer.o" "./emlib/em_usart.o" "./emlib/em_vcmp.o" "./emlib/em_vdac.o" "./emlib/em_wdog.o" "./src/Source_Files/HW_delay.o" "./src/Source_Files/Si7021.o" "./src/Source_Files/app.o" "./src/Source_Files/cmu.o" "./src/Source_Files/gpio.o" "./src/Source_Files/i2c.o" "./src/Source_Files/letimer.o" "./src/Source_Files/scheduler.o" "./src/Source_Files/sleep_routines.o" "./src/main.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
+Finished building target: MS_I2C_Lab_5.axf
+ 
+Building hex file: MS_I2C_Lab_5.hex
+arm-none-eabi-objcopy -O ihex "MS_I2C_Lab_5.axf" "MS_I2C_Lab_5.hex"
+ 
+Building bin file: MS_I2C_Lab_5.bin
+arm-none-eabi-objcopy -O binary "MS_I2C_Lab_5.axf" "MS_I2C_Lab_5.bin"
+ 
+Building s37 file: MS_I2C_Lab_5.s37
+arm-none-eabi-objcopy -O srec "MS_I2C_Lab_5.axf" "MS_I2C_Lab_5.s37"
+ 
+Running size tool
+arm-none-eabi-size "MS_I2C_Lab_5.axf" -A
+MS_I2C_Lab_5.axf  :
+section            size        addr
+.text             10024           0
+.ARM.exidx            8       10024
+.data               144   536870912
+.bss                152   536871056
+.heap              3072   536871208
+.stack_dummy       1024   536871208
+.ARM.attributes      46           0
+.comment            126           0
+.debug_frame        148           0
+Total             14744
+
+
+ 
+
+15:59:48 Build Finished. 0 errors, 0 warnings. (took 1s.22ms)
+
